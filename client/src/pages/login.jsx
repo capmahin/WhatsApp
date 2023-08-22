@@ -9,7 +9,7 @@ function login() {
       height={300} width={300}
       
       />
-      <span>Whatsapp</span>
+      <span className="text-7xl">Whatsapp</span>
     </div>
   </div>;
 }
