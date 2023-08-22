@@ -1,10 +1,12 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import Image from "next/image";
 import React from "react";
 import {FcGoogle} from "react-icons/fc"
 
 function login() {
+
 const handleLogin = () =>{
-  alert("login")
+  const provider = new GoogleAuthProvider()
 }
 
   return <div className="flex justify-center items-center bg-panel-header-background h-screen w-screen flex-col gap-6">
