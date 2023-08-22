@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import {FcGoogle} from "react-icons/fc"
 
 function login() {
   return <div className="flex justify-center items-center bg-panel-header-background h-screen w-screen flex-col gap-6">
@@ -11,6 +12,9 @@ function login() {
       />
       <span className="text-7xl">Whatsapp</span>
     </div>
+    <button>
+      <FcGoogle/>
+    </button>
   </div>;
 }
 
