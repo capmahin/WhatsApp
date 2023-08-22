@@ -13,7 +13,8 @@ function login() {
       <span className="text-7xl">Whatsapp</span>
     </div>
     <button>
-      <FcGoogle/>
+      <FcGoogle className="text-4xl"/>
+      <span className="text-white text-2xl">Login white Google</span>
     </button>
   </div>;
 }
