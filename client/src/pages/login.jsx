@@ -7,7 +7,9 @@ function login() {
       <Image 
       src="/whatsapp.gif" alt="Whatsapp" 
       height={300} width={300}
+      
       />
+      <span>Whatsapp</span>
     </div>
   </div>;
 }
