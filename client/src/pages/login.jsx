@@ -1,7 +1,7 @@
 import React from "react";
 
 function login() {
-  return <div>login</div>;
+  return <div className="flex justify-center">login</div>;
 }
 
 export default login;
