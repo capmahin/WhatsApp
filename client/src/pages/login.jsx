@@ -1,12 +1,14 @@
-import { GoogleAuthProvider } from "firebase/auth";
+import { firebaseAuth } from "@/utils/FirebaseConfig";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Image from "next/image";
 import React from "react";
 import {FcGoogle} from "react-icons/fc"
 
 function login() {
 
-const handleLogin = () =>{
+const handleLogin = async () =>{
   const provider = new GoogleAuthProvider()
+  const {user} = await signInWithPopup(firebaseAuth,provider)
 }
 
   return <div className="flex justify-center items-center bg-panel-header-background h-screen w-screen flex-col gap-6">
