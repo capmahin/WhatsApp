@@ -12,7 +12,7 @@ function login() {
       />
       <span className="text-7xl">Whatsapp</span>
     </div>
-    <button>
+    <button className="flex items-center justify-center gap-7 bg-search-input-container-background p-5 rounded-lg">
       <FcGoogle className="text-4xl"/>
       <span className="text-white text-2xl">Login white Google</span>
     </button>
