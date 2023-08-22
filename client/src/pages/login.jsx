@@ -8,7 +8,15 @@ function login() {
 
 const handleLogin = async () =>{
   const provider = new GoogleAuthProvider()
-  const {user} = await signInWithPopup(firebaseAuth,provider)
+  const {user:{displayName:name, email, photoUrl: profileImage}} = await signInWithPopup(firebaseAuth,provider);
+  try {
+    if(email){
+      
+    }
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
 
   return <div className="flex justify-center items-center bg-panel-header-background h-screen w-screen flex-col gap-6">
