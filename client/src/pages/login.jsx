@@ -1,4 +1,6 @@
+import { CHECK_USER_ROUTER } from "@/utils/ApiRoutes";
 import { firebaseAuth } from "@/utils/FirebaseConfig";
+import axios from "axios";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +13,7 @@ const handleLogin = async () =>{
   const {user:{displayName:name, email, photoUrl: profileImage}} = await signInWithPopup(firebaseAuth,provider);
   try {
     if(email){
-      
+      const {data} = await axios.post(CHECK_USER_ROUTER,{email});
     }
   } catch (error) {
     console.log(error)
