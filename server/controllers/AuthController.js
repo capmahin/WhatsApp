@@ -11,6 +11,9 @@ export const checkUser = async (req,res,next)=>{
         if(!user){
             return res.json({msg: "User not found", status:false})
         }
+        else{
+            return res.json({msg:"User Found", status:true})
+        }
     } catch (error) {
         next(error)
     }
