@@ -12,7 +12,7 @@ export const checkUser = async (req,res,next)=>{
             return res.json({msg: "User not found", status:false})
         }
         else{
-            return res.json({msg:"User Found", status:true})
+            return res.json({msg:"User Found", status:true, data:user})
         }
     } catch (error) {
         next(error)
