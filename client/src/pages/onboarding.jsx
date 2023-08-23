@@ -1,7 +1,7 @@
 import React from "react";
 
 function onboarding() {
-  return <div>onboarding</div>;
+  return <div className="bg-panel-header-background">onboarding</div>;
 }
 
 export default onboarding;
