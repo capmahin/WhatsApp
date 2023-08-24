@@ -23,6 +23,8 @@ const handleLogin = async () =>{
       const {data} = await axios.post(CHECK_USER_ROUTER,{email});
       console.log({data});
       if(!data.status){
+        dispatch({type:reducerCases.SET_NEW_USER, newUser:true})
+
         dispatch({
           type:reducerCases.SET_USER_INFO,userInfo:{
             name,email,profileImage,status:"",
