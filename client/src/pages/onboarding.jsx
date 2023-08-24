@@ -12,6 +12,7 @@ function onboarding() {
     />
     <span className="text-7xl">Whatsapp</span>
     </div>
+    <h2 className="text-7xl">Create your profile</h2>
   </div>;
 }
 
