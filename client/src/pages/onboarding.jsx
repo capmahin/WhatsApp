@@ -10,6 +10,7 @@ function onboarding() {
     height={300}
     width={300}
     />
+    <span className="text-7xl">Whatsapp</span>
     </div>
   </div>;
 }
