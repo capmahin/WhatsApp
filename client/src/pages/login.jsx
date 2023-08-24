@@ -1,3 +1,4 @@
+import { useStateProvider } from "@/context/StateContext";
 import { CHECK_USER_ROUTER } from "@/utils/ApiRoutes";
 import { firebaseAuth } from "@/utils/FirebaseConfig";
 import axios from "axios";
@@ -9,6 +10,10 @@ import {FcGoogle} from "react-icons/fc"
 
 function login() {
 const router = useRouter();
+
+const [{}, dispatch] = useStateProvider();
+
+
 const handleLogin = async () =>{
   const provider = new GoogleAuthProvider()
   const {user:{displayName:name, email, photoUrl: profileImage}} = await signInWithPopup(firebaseAuth,provider);
