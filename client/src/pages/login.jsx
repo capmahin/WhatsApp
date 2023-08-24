@@ -1,4 +1,5 @@
 import { useStateProvider } from "@/context/StateContext";
+import { reducerCases } from "@/context/constants";
 import { CHECK_USER_ROUTER } from "@/utils/ApiRoutes";
 import { firebaseAuth } from "@/utils/FirebaseConfig";
 import axios from "axios";
@@ -22,6 +23,11 @@ const handleLogin = async () =>{
       const {data} = await axios.post(CHECK_USER_ROUTER,{email});
       console.log({data});
       if(!data.status){
+        dispatch({
+          type:reducerCases.SET_USER_INFO,userInfo:{
+            name,email,profileImage,status:"",
+          }
+        })
           router.push("/onboarding");
       }
     }
